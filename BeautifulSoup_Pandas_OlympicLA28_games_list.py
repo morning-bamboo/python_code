@@ -20,8 +20,7 @@ for game in games:
     # print(game_title)
 
     game_link = game.a["href"]
-    # for game_link in game_links:
-    #     href = game_link.get("href")
+    
     game_url = "https://la28.org" + game_link
     # print(game_url)
     game_info["game_title"] = game_title
@@ -37,4 +36,5 @@ game_df.to_csv("LA28Games.csv", index=False)
 #re-read from the saved csv
 df2 = pd.read_csv("LA28Games.csv")
 print(df2.describe())
+
 
